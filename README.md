@@ -1,6 +1,6 @@
 # Resta (Restaurant Website)
 
-Professional, eye-catching, sleek and modern web design perfect for business in food & drink industry. 
+Professional, eye-catching, sleek and modern web design perfect for businesses in food & drink industry. 
 
 Complete with a menu, gallery, and even a reservation form page.
 
