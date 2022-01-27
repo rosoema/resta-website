@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <title>Welcome | Resta</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="Ema Roso">
+    <meta name="keywords" content="resta, restaurand, food, fine dining, drinks, menu">
+    <meta name="description" content="Resta is regarded as one of the best restaurants in the world, with its innovative cuisine and offers of high quality fine dining, wine, service and atmosphere.">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="icon" href="./mediji/icon.ico">
+    <script src="./myScript.js"></script>
+  </head>
+  
+  <body>
+    
+    <div class="invisible" id="overlay" onclick="backToNormal2()"></div>
+    
+    <!--- Header section (logo and navigation bar) --->
+    
+    <header>
+      <a href="./index.html"><img src="./mediji/logo.png" alt="resta logo"></a>
+      <button class="gototop"></button>
+      
+      <nav>
+        <ul>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="./reservations.html">Reservations</a></li>
+          <li><a href="./gallery.html">Gallery</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Menu</a>
+            <div class="dropdown-content">
+              <a href="./food.html">Food</a>
+              <a href="./drinks.html">Drinks</a>
+            </div>
+          </li>
+          <li><a href="./index.html">Welcome</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <!--- Intro pic --->
+    
+    <main>
+    
+      <figure id="intro-pic">
+        <img src="./mediji/intro-pic.png" alt="fine dining plating">
+      </figure>
+      
+    <!--- Our story section and awards --->
+      
+      <div class="story-awards"> 
+        <article id="our-story">
+          <h2>Our Story</h2>
+          <p>Built on family, friendship and passion for good food, by welcoming you to Resta, we welcome you into our home - a place of comfort, warmth and exceptional taste. Our only goal is to give you the best service and keep creating more happy moments.</p>
+          <p>We strive to serve you only high quality ingredients, prepared by our bestowed chefs, who are among the World's best. Also dedicated to improving the lives of those who produce the food that comes to your table, as well as the environment it grows in, Resta continues to invest in the food industry's sustainability.</p>
+          <p>We look forward to including all our guests on this journey of endless growth and excellence.</p>
+        </article>
+      
+        <section id="award">
+          <h2>Recognitions</h2>
+          <div class="awards">
+            <div id="award-item">
+              <figure>
+                <img src="./mediji/award/award1.png" alt="restaurant award"/>
+                <figcaption>Chef's Choice 2020</figcaption>
+              </figure>
+            </div>
+        
+            <div id="award-item">
+              <figure>
+                <img src="./mediji/award/award2.png" alt="restaurant award"/>
+                <figcaption>Luxury Restaurant Award</figcaption>
+              </figure>
+            </div>
+        
+            <div id="award-item">
+              <figure>
+                <img src="./mediji/award/award3.png" alt="restaurant award"/>
+                <figcaption>Certificate of Excellence</figcaption>
+              </figure>
+            </div>
+        
+            <div id="award-item">
+              <figure>
+                <img src="./mediji/award/award4.png" alt="restaurant award"/>
+                <figcaption>Open Table Certified</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+      </div>
+      
+      <!--- Mini Gallery and 'See more' button --->
+      
+      <img src="./mediji/mini-gallery/image-6.jpg" alt="fine dining" class="invisible" id="zoom-in-gallery" onclick="changePicture1(this)">
+      
+      <div class="gallery-button">
+        <section id="gallery-mini">
+          <h2>Sneak a peek into our world!</h2>
+          <div id="image-mini-container">
+            <div id="image-mini-gallery">
+              
+              <div id="mini-item">
+                <img src="./mediji/mini-gallery/image-6.jpg" alt="fine dining plating" id="pic-6" onclick="openPicture(this)">
+              </div>
+              
+              <div id="mini-item">
+                <img src="./mediji/mini-gallery/image-1.jpg" alt="fine dining dish" onclick="openPicture(this)" id="pic-1">
+              </div>
+              
+              <div id="mini-item">
+                <img src="./mediji/mini-gallery/image-2.jpg" alt="fine dining restaurant" onclick="openPicture(this)" id="pic-2">
+              </div>
+              
+              <div id="mini-item">
+                <img src="./mediji/mini-gallery/image-3.jpg" alt="fine dining dish" onclick="openPicture(this)" id="pic-3">
+              </div>
+              
+              <div id="mini-item">
+                <img src="./mediji/mini-gallery/image-5.jpg" alt="fine dining plating" onclick="openPicture(this)" id="pic-5">
+              </div>
+              
+              <div id="mini-item">
+                <img src="./mediji/mini-gallery/image-4.jpg" alt="fine dining dish" onclick="openPicture(this)" id="pic-4">
+              </div>
+
+            </div>
+          </div>
+        
+          <a id="see-more" href="./gallery.html">Click for more</a>
+        </section>
+      </div>
+      
+    </main>
+      
+    <!--- Contact section --->
+      
+    <section id="contact">
+      <div id="contact-container">
+        <div id="phone-email">
+          <h3>Contact</h3>
+          <p><strong>phone:</strong> 636-203-3031</p>
+          <p><strong>e-mail:</strong> contact@resta.com</p>
+        </div>
+          
+        <div id="location">
+          <h3>Location</h3>
+          <p>835  Matthews Dr</p>
+          <p>Fenton</p>          
+          <p>MO 63026</p>
+          <p>Find us on <a target="_blank" href="https://goo.gl/maps/9FSRGt4BrASGCkS29">Google Maps</a></p>
+        </div>
+        
+        <div id="work-hours">
+          <h3>Working Hours</h3>
+          <p><strong>MON - FRI</strong> 18:00 - 23:00</p>
+          <p><strong>SAT</strong> 19:00 - 01:00</p>          
+          <p><strong>SUN</strong> closed</p>
+        </div>
+      </div>
+    </section>
+      
+    
+    <!--- Footer --->
+        
+    <footer>
+      <h5>copyright © 2022 Roso Ema All rights reserved.</h5>
+    </footer>
+    
+  </body>
+
+</html>

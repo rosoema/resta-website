@@ -1,0 +1,1461 @@
+/* --- links, imports, fonts --- */
+
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200&family=Lato:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200&family=Lato:wght@100;300&family=Poppins:wght@300;400&display=swap');
+
+/* main */
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #ece9e3;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+/* --- Code for the header, navigation and dropdown --- */
+
+header {
+  width: 100%;
+  height: 90px;
+  padding-bottom: 20px;
+}
+
+header a img {
+  float: left;
+  padding-top: 20px;
+  padding-left: 30px;
+}
+
+header nav {
+  float: right;
+  padding-top: 20px;
+  padding-right: 20px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+
+li {
+  float: right;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  text-align: center;
+  margin-left: 10px;
+  padding: 5px 23px;
+  text-decoration: none;
+  color: #8E6D44;
+  font-size: 21px;
+  font-family: Lato, sans-serif;
+  transition: 0.3s;
+  background-color: rgba(209, 196, 180, 0.3);
+  border-bottom: 2px solid rgba(164, 138, 105, 0.3);
+  border-radius: 3px;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: rgba(143, 152, 158, 0.3);
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: transparent;
+  border-radius: 2px;
+  padding-top: 3px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 5px 16px;
+  margin-bottom: 3px;
+  border: none;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(143, 152, 158, 0.3);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.gototop{
+  position: fixed;
+  display: block;
+  box-sizing: border-box;
+  height: 4vw;
+  width: 4vw;
+  border: none;
+  background-color: rgb(209, 196, 180);
+  border-radius: 0.3vw;
+  bottom: 5vw;
+  right: 5vw;
+  margin-right: -3vw;
+  outline: none;
+  opacity: 0;
+  transition: all .5s ease-out;
+}
+ 
+.visible{
+  transition: all .5s ease-out;
+  margin-right: 0vw;
+  opacity: 90%;
+  z-index: 95;
+}
+
+.visible:hover {
+  background-color: rgba(143, 152, 158, 0.6);
+}
+ 
+.gototop::before, .gototop::after{
+  content: '';
+  position: absolute;
+  height: 1.7vw;
+  width: 0.07vw;
+  background-color: #fff;
+  top: 1.1vw;
+}
+.gototop::before{
+  left: 1.4vw;
+  transform: rotate(45deg);
+}
+.gototop::after{
+  right: 1.4vw;
+  transform: rotate(-45deg);
+}
+
+/* --- --- Code for Contact section and Footer --- --- */
+
+#contact {
+  width: 90%;
+  border-radius: 2px;
+  background-color: rgba(143, 152, 158, 0.6);
+  border-bottom: 2px solid rgba(143, 152, 158, 0.8);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+  padding: 50px 0;
+}
+
+#contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#phone-email, 
+#location, 
+#work-hours {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(236, 233, 227, 0.2);
+  border-top: 2px solid rgba(236, 233, 227, 0.4);
+  border-left: 2px solid rgba(236, 233, 227, 0.4);
+  border-bottom: 2px solid rgba(143, 152, 158, 0.6);
+  border-right: 2px solid rgba(143, 152, 158, 0.6);
+  padding: 20px 80px;
+  border-radius: 4px;
+  color: white;
+  font-family: Lato, sans-serif;
+  transition: 0.3s;
+}
+
+#phone-email h3, 
+#location h3, 
+#work-hours h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#location p a {
+  text-decoration: none;
+  color: #7f8994;
+  transition: 0.2s;
+}
+
+#location p a:hover {
+  text-shadow: 2px 2px 4px #554128;
+  color: white;
+}
+
+#phone-email:hover, 
+#location:hover, 
+#work-hours:hover {
+  transform: scale(1.2);
+}
+
+footer {
+  background-color: rgb(113, 122, 128);
+  height: 30px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+footer h5 {
+  margin: 0;
+  padding: 4px 0 0 0px;
+  text-align: center;
+  color: white;
+  font-family: Lato, sans-serif;
+  font-weight: lighter;
+  font-size: 14px;
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+
+/* --- --- --- Welcome page code --- --- --- */
+
+
+#intro-pic {
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+figure {
+  margin: unset;
+}
+
+.story-awards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+#our-story {
+  padding: 0 17% 6% 17%;
+}
+
+#our-story h2{
+  font-family: Lato, sans-serif;
+  font-size: 50px; 
+  font-weight: 300;
+  color: #6D3B07;
+}
+
+#our-story p {
+  font-family: Assistant, sans-serif;
+  font-size: 20px;
+  color: #6D3B07;
+}
+
+#award h2 {
+  font-family: Lato, sans-serif;
+  font-size: 50px; 
+  font-weight: 300;
+  color: #6D3B07;
+}
+
+.awards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  padding: 0 10% 10% 10%;
+}
+
+#award-item img {
+  width: 120px;
+  height: 120px;
+}
+
+#award-item figure {
+  margin: 0;
+  padding: 0;
+}
+
+#award-item figcaption {
+  padding: 10px 0 10px 0;
+  text-transform: uppercase;
+  font-family: Lato, sans-serif;
+  color: #382021;
+}
+
+.gallery-button {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.gallery-button #gallery-mini {
+  padding: 0 10%;
+}
+
+.gallery-button #gallery-mini h2 {
+  font-family: Lato, sans-serif;
+  font-size: 50px; 
+  font-weight: 300;
+  color: #6D3B07;
+  margin-bottom: 40px;
+  padding: 10px 0;
+}
+
+#image-mini-container {
+  width: 90%;
+  margin-left: auto; 
+  margin-right: auto;
+  margin-top: 3vw;
+  margin-bottom: 3vw;
+  background-color: rgba(246, 243, 237, 0.9);
+  padding: 50px 70px;
+  border-radius: 4px;
+  border-bottom: 3px solid rgba(164, 138, 105, 0.2);
+  border-right: 3px solid rgba(164, 138, 105, 0.2);
+  border-top: 3px solid rgba(255, 255, 255, 0.3);
+  border-left: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+#image-mini-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 1.5vw; 
+}
+
+#image-mini-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
+  border-radius: 3px;
+  transition: 0.3s;
+  opacity: 75%;
+  z-index: 1;
+  position: relative;
+  cursor: pointer;
+}
+
+#mini-item {
+  height: 300px;
+  width: auto;
+}
+
+#mini-item img:hover {
+  transform: scale(1.5);
+  width: 100%;
+  height: 100%;
+  opacity: 100%;
+  z-index: 2;
+}
+
+#see-more {
+  background-color: rgba(209, 196, 180, 0.5);
+  border-bottom: 2px solid rgba(164, 138, 105, 0.5);
+  border-radius: 3px;
+  color: #8E6D44;
+  padding: 8px 82px;
+  text-align: center;
+  font-size: 20px;
+  font-family: Lato, sans-serif;
+  margin: 4px 2px;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  margin-bottom: 100px;
+  text-transform: uppercase;
+}
+
+#see-more:hover {
+  transform: scale(1.1);
+  text-shadow: 2px 2px 4px #554128;
+  color: white;
+  background-color: rgba(143, 152, 158, 0.3);
+}
+
+/* --- --- --- Food page code --- --- --- */
+
+.menus {
+  width: 80%;
+  padding: 80px 10% 40px 10%;
+}
+
+.menus .appetizers,
+.menus .mains,
+.menus .desserts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  margin-bottom: 130px;
+}
+
+.menus .appetizers img,
+.menus .mains img,
+.menus .desserts img {
+  display: block;
+  margin-left: auto;
+  margin: auto;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.menus .appetizers img:hover,
+.menus .mains img:hover,
+.menus .desserts img:hover {
+  transform: scale(1.1);
+}
+
+#appetizers-items,
+#mains-items,
+#desserts-items {
+  font-family: Lato, sans-serif;
+  padding-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#appetizers-items h2,
+#mains-items h2,
+#desserts-items h2 {
+  font-size: 28px;
+  color: #6D3B07;
+}
+
+#appetizers-dish,
+#mains-dish,
+#desserts-dish {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+  border-bottom: 1px solid white;
+  color: #6D3B07;
+  transition: 0.3s;
+}
+
+#appetizers-dish p,
+#mains-dish p,
+#desserts-dish p {
+  margin: 0;
+  line-height: 22px;
+  font-size: 22px;
+}
+
+#appetizers-dish p span,
+#mains-dish p span,
+#desserts-dish p span {
+  display: block;
+  color: #825f39;
+  font-size: 18px;
+  margin-top: 2px;
+  line-height: 1.5;
+}
+
+#price {
+  font-size: 20px !important;
+  text-align: right;
+}
+
+#mains-items,
+#desserts-items {
+  padding-top: 0 !important;
+}
+
+#mains-items h2,
+#desserts-items h2 {
+  margin-top: 0 !important;
+}
+
+/* --- --- --- Drinks page code --- --- --- */
+
+.drinks {
+  width: 80%;
+  padding: 30px 10% 40px 10%;
+}
+
+.drinks h2 {
+  font-size: 28px;
+  color: #6D3B07;
+  margin-bottom: 0;
+  margin-top: 50px;
+  font-family: Lato, sans-serif; 
+}
+
+#white-wine,
+#red-wine,
+#rose-wine,
+#sparkling-wine,
+#champagne-wine,
+#special {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+  border-bottom: 1px solid white;
+  color: #6D3B07;
+  transition: 0.3s;
+  font-family: Lato, sans-serif;
+  padding-top: 20px;
+  margin: auto;
+  width: 100%;
+}
+
+#white-wine p,
+#red-wine p,
+#rose-wine p,
+#sparkling-wine p,
+#champagne-wine p,
+#special p {
+  margin: 0;
+  line-height: 22px;
+  font-size: 22px;
+}
+
+#special p span {
+  display: block;
+  color: #825f39;
+  font-size: 18px;
+  margin-top: 2px;
+  line-height: 1.5;
+}
+
+.drinks #price {
+  font-size: 22px !important;
+}
+
+#specials-special {
+  margin-bottom: 20px !important;
+}
+
+/* --- --- --- Gallery page code --- --- --- */
+
+main .resta-gallery {
+  width: 100%;
+  text-align: center;
+}
+
+.resta-gallery h2 {
+  font-family: Lato, sans-serif;
+  font-size: 50px;
+  font-weight: 300;
+  color: #6D3B07;
+}
+
+#restaurant-gallery-container,
+#food-drinks-gallery-container {
+  width: 80%;
+  margin-left: auto; 
+  margin-right: auto;
+  margin-top: 3vw;
+  margin-bottom: 5vw;
+  background-color: rgba(246, 243, 237, 0.9);
+  padding: 50px 70px;
+  border-radius: 4px;
+  border-bottom: 3px solid rgba(164, 138, 105, 0.2);
+  border-right: 3px solid rgba(164, 138, 105, 0.2);
+  border-top: 3px solid rgba(255, 255, 255, 0.3);
+  border-left: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+#restaurant-gallery,
+#food-drinks-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 1.5vw; 
+}
+
+#restaurant-gallery img,
+#food-drinks-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
+  border-radius: 3px;
+  transition: 0.3s;
+  opacity: 70%;
+  position: relative;
+  z-index: 1;
+}
+
+#gallery-item {
+  height: 300px;
+  height: auto;
+}
+
+#gallery-item img:hover {
+  transform: scale(1.5);
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  opacity: 100%;
+}
+
+.zoom-in-gallery {
+  width: 50%;
+  margin-left: 25%;
+  height: 80%;
+  position: fixed;
+  z-index: 99;
+  top: 12%;
+  border-radius: 0.5vw;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* --- --- --- Reservations page code --- --- --- */
+
+.alert-box {
+  z-index: 99;
+  position: fixed;
+  width: 60%;
+  height: 25vw;
+  margin-left: 15.55%;
+  text-align: center;
+  background-color: rgb(209, 196, 180);
+  padding: 4vw;
+  border-radius: 0.4vw;
+  border-bottom: 0.3vw solid rgba(164, 138, 105, 0.5);
+  border-right: 0.3vw solid rgba(164, 138, 105, 0.5);
+  border-top: 0.25vw solid rgba(255, 255, 255, 0.5);
+  border-left: 0.25vw solid rgba(255, 255, 255, 0.5);
+}
+
+.alert-box h2 {
+  font-family: Poppins, sans-serif;
+  font-size: 3vw;
+  color: #6D3B07;
+  font-weight: lighter;
+}
+
+.alert-box p {
+  font-family: Lato, sans-serif;
+  font-size: 1.5vw;
+  color: #6D3B07;
+  margin-bottom: 0;
+}
+
+#back-to-main-page {
+  background-color: rgba(246, 243, 237, 0.5);
+  border-bottom: 0.25vw solid rgba(164, 138, 105, 0.5);
+  border-radius: 0.3vw;
+  padding: 0.1vw 1.5vw;
+  color: #8E6D44;
+  text-align: center;
+  font-size: 1.2vw;
+  font-family: Lato, sans-serif;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-top: 5vw;
+}
+
+#back-to-main-page:hover {
+  transform: scale(1.1);
+  text-shadow: 2px 2px 4px #554128;
+  color: white;
+  background-color: rgba(143, 152, 158, 0.3);
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  z-index: 98;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  transition: .5s;
+}
+
+.overlay:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.invisible {
+  display: none;
+}
+
+.policy {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 4vw;
+  border-radius: 4px;
+  background-color: rgba(246, 243, 237, 0.9);
+  border-bottom: 3px solid rgba(164, 138, 105, 0.2);
+  border-right: 3px solid rgba(164, 138, 105, 0.2);
+  border-top: 3px solid rgba(255, 255, 255, 0.3);
+  border-left: 3px solid rgba(255, 255, 255, 0.3);
+  padding: 10px 0 40px 0px;
+}
+
+.policy h4 {
+  font-family: Lato, sans-serif;
+  font-size: 20px;
+  color: #6D3B07;
+  margin-bottom: 0;
+  font-weight: bold;
+  margin-left: 2vw;
+}
+
+.policy p {
+  font-family: Assistant, sans-serif;
+  font-size: 18px;
+  color: #6D3B07;
+  width: 95%;
+  transition: 0.3s;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.reservation {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 4vw;
+  margin-top: 5vw;
+  background-color: rgba(209, 196, 180, 0.3);
+  border-top: 2px solid rgba(255, 255, 255, 0.4);
+  border-left: 2px solid rgba(255, 255, 255, 0.4);
+  border-bottom: 3px solid rgba(164, 138, 105, 0.3);
+  border-right: 2px solid rgba(164, 138, 105, 0.3);
+  border-radius: 3px;
+  padding: 0;
+}
+
+.reservation h2 {
+  font-family: Lato, sans-serif;
+  font-size: 46px;
+  font-weight: 100;
+  color: #6D3B07;
+  text-align: left;
+  padding: 2vw 0 0 4vw;
+  margin: 0;
+}
+
+#reservation-details,
+#contact-info-add {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  background-color: rgb(246, 243, 237);
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 2vw;
+  padding: 0 30px 30px 30px;
+  grid-gap: 10px;
+}
+
+form h3 {
+  font-family: Poppins, sans-serif;
+  font-size: 24px;
+  color: #6D3B07;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-weight: 300;
+  background-color: rgb(246, 243, 237);
+  width: 90%;
+  padding: 20px 30px 30px 30px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+label {
+  font-family: Lato, sans-serif;
+  font-size: 19px;
+  color: #6D3B07;
+}
+
+.reservation form {
+  width: 100%;
+  margin-top: 2vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2vw;
+}
+
+#date, #time, #seating, #adults, #children, #name, #phone, #email, #comments {
+  font-family: Lato, sans-serif;
+  font-size: 20px;
+  color: #6D3B07;
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom: 3px solid rgba(164, 138, 105, 0.2);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  padding-left: 10px;
+  padding-right: 8px;
+  height: 3vw;
+  width: 200px;
+  border-radius: 4px;
+  display: block;
+}
+
+#seating, 
+#phone,
+#email {
+  width: 300px !important;
+}
+
+#form-comments {
+  grid-column: 1/3;
+  grid-row: 2/3;
+}
+
+#comments {
+  width: 43vw !important;
+  padding-top: 0.55vw;
+}
+
+#submit-button {
+  width: 93%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  text-align: left;
+}
+
+#submit {
+  background-color: rgba(209, 196, 180, 0.5);
+  border-bottom: 2px solid rgba(164, 138, 105, 0.5);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 3px;
+  color: #8E6D44;
+  padding: 8px 82px;
+  text-align: center;
+  font-size: 20px;
+  font-family: Lato, sans-serif;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+#submit:hover {
+  transform: scale(1.1);
+  text-shadow: 2px 2px 4px #554128;
+  color: white;
+  background-color: rgba(143, 152, 158, 0.3);
+}
+
+
+/* --- --- --- For smaller screens!  (max 1200px)--- --- --- */
+
+@media only screen and (max-width: 1200px) {
+  header {
+    height: auto;
+  }
+  
+  header a img {
+    float: none;
+    margin: auto;
+    display: block;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  header nav {
+    float: none;
+    padding: 0;
+    margin: 1vw;
+  }
+  
+  header nav ul {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 0;
+    direction: rtl;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  li a, .dropbtn {
+    margin: 0;
+    width: 15vw;
+    padding: 0.5vw;
+    font-size: 1.9vw;
+  }
+  
+  .dropdown-content a {
+    padding: 0.5vw;
+    margin-bottom: 0.3vw;
+    margin-right: 1.64vw;
+  }
+  
+  .gototop{
+  height: 5vw;
+  width: 5vw;
+}
+ 
+ .gototop::before, .gototop::after{
+   height: 2.5vw;
+   width: 0.07vw;
+   background-color: #fff;
+   top: 1.3vw;
+ }
+  
+  .gototop::before{
+    left: 1.6vw;
+  }
+  
+  .gototop::after{
+    right: 1.6vw;
+  }
+  
+  #contact {
+    padding: 4vw 0.3vw;
+    margin-bottom: 8vw;
+  }
+  
+  #phone-email,
+  #location,
+  #work-hours {
+    padding: 1.5vw 2vw;
+  }
+  
+  #phone-email h3,
+  #location h3,
+  #work-hours h3 {
+    font-size: 1.7vw;
+  }
+  
+  #phone-email p,
+  #location p,
+  #work-hours p {
+    font-size: 1.7vw;
+  }
+  #intro-pic {
+    margin: 0;
+  }
+  #intro-pic img {
+    width: 90%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .story-awards {
+    display: block;
+  }
+  
+  #our-story,
+  .awards {
+    padding: 0 10vw 2vw 10vw;
+    padding: 0 10vw 2vw 10vw;
+  }
+  
+  #our-story h2,
+  #award h2,
+  .gallery-button #gallery-mini h2,
+  .resta-gallery h2,
+  .reservation h2 {
+    font-size: 4.5vw;
+  }
+  
+  #our-story p {
+    font-size: 2.3vw;
+  }
+  
+  .awards {
+    grid-gap: 0;
+  }
+  
+  #award-item img {
+    width: 12vw;
+    height: auto;
+  }
+  
+  #award-item figcaption {
+    padding: 1vw 0;
+    font-size: 1.8vw;
+  }
+  
+  .gallery-button #gallery-mini {
+    padding: 0;
+  }
+  
+  #mini-item {
+    width: 23vw;
+    height: 23vw;
+    padding: 1.5vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #image-mini-container {
+    padding: 1.5vw 0;
+    margin-bottom: 4vw;
+  }
+  
+  #image-mini-gallery {
+    grid-gap: 1.5vw; 
+  }
+  
+  #see-more {
+    font-size: 2vw;
+    margin: 0.4vw 0.2vw 8vw 0.2vw;
+    padding: 0.8vw 7vw;
+  }
+  
+  .zoom-in-gallery {
+    width: 70%;
+    margin-left: 15%;
+    height: 70%;
+  }
+  
+  .menus {
+    width: 90%;
+    padding: 6vw;
+    margin-bottom: 4vw;
+    margin-top: 4vw;
+  }
+  
+  #appetizers-items h2, 
+  #mains-items h2, 
+  #desserts-items h2, 
+  .drinks h2 {
+    font-size: 3vw;
+    margin-bottom: 0.8vw;
+  }
+  
+  #appetizers-dish p, 
+  #mains-dish p, 
+  #desserts-dish p, 
+  #white-wine p, 
+  #red-wine p, 
+  #rose-wine p, 
+  #sparkling-wine p, 
+  #champagne-wine p, 
+  #special p {
+    font-size: 2.4vw;
+  }
+  
+  #appetizers-dish p span, 
+  #mains-dish p span, 
+  #desserts-dish p span, 
+  #special p span {
+    font-size: 2vw;
+  }
+  
+  #price, 
+  .drinks #price {
+    font-size: 2.2vw !important;
+  }
+  
+  .menus .appetizers, 
+  .menus .mains, 
+  .menus .desserts {
+    grid-gap: 2vw;
+    margin-bottom: 7vw;
+  }
+  
+  .menus .appetizers img, 
+  .menus .mains img, 
+  .menus .desserts img {
+    width: 95%;
+    height: auto;
+  }
+  
+  #white-wine, 
+  #red-wine, 
+  #rose-wine, 
+  #sparkling-wine, 
+  #champagne-wine, 
+  #special {
+    padding: 1vw 0 1.8vw 0;
+  }
+  
+  #restaurant-gallery-container, 
+  #food-drinks-gallery-container {
+    padding: 0;
+    width: 95%;
+  }
+  
+  #restaurant-gallery, 
+  #food-drinks-gallery {
+    padding: 3.5vw;
+  }
+  
+  #gallery-item {
+    height: 21vw;
+    width: auto;
+  }
+  
+  .reservation {
+    width: 95%;
+  }
+  
+  form h3 {
+    font-size: 2.2vw;
+    padding: 2vw 3vw 3vw 3vw;
+  }
+  
+  #reservation-details, #contact-info-add {
+    padding: 0 3vw 3vw 3vw;
+  }
+  
+  label, #date, #time, #seating, #adults, #children, #name, #phone, #email, #comments {
+    font-size: 1.8vw;
+  }
+  
+  #date, #time, #seating, #adults, #children, #name, #phone, #email {
+    width: 23vw !important;
+  }
+  
+  #submit {
+    font-size: 2vw;
+    padding: 0.8vw 8vw;
+  }
+  
+  #comments {
+    width: 51.5vw !important;
+  }
+  
+  .alert-box {
+    height: 40vw;
+  }
+  
+  .alert-box p {
+    font-size: 2.5vw;
+  }
+  
+  .alert-box h2 {
+    font-size: 4.5vw;
+  }
+  
+  #back-to-main-page {
+    font-size: 2.2vw;
+    margin-top: 11vw;
+  }
+  
+  .policy {
+    width: 95%;
+    padding: 1vw 0 4vw 0;
+  }
+  
+  .policy h4 {
+    font-size: 2vw;
+  }
+  
+  .policy p {
+    font-size: 1.8vw;
+  }
+  
+  footer {
+    height: 3vw;
+    box-sizing: border-box;
+  }
+  
+  footer h5 {
+    font-size: 1.7vw;
+  } 
+}
+
+/* --- --- --- For smaller screens!  (max 700px)--- --- --- */
+
+@media only screen and (max-width: 700px) {
+  ul li a, 
+  .dropbtn {
+    width: 96%;
+    height: auto;
+    padding: 0;
+    font-size: 2.5vw;
+  }
+  
+  .dropdown-content {
+    width: 20vw;
+  }
+  
+  .dropdown-content a {
+    margin-right: 0.4vw;
+    padding: 0;
+    width: 91%;
+  }
+  
+  #our-story p {
+    font-size: 3vw;
+  }
+  
+  #our-story h2, 
+  #award h2, 
+  .gallery-button #gallery-mini h2, 
+  .resta-gallery h2, 
+  .reservation h2 {
+    font-size: 5.5vw;
+    margin-bottom: 2vw;
+  }
+  
+  #award-item img {
+    width: 14vw;
+    height: auto;
+  }
+  
+  #award-item figcaption {
+    font-size: 2vw;
+  }
+  
+  #image-mini-container{
+    width: 70%;  
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+  }
+  
+  #image-mini-gallery {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: none;
+    grid-gap: 2vw;
+  }
+  
+  #mini-item {
+    padding: 1.5vw 0 2vw 0;
+    width: 50vw;
+    height: 50vw;
+  }
+  
+  #see-more {
+    font-size: 3vw;
+  }
+  
+  .zoom-in-gallery {
+    height: 60%;
+  }
+  
+  #contact {
+    width: 95%;  
+  }
+  
+  #phone-email, 
+  #location, 
+  #work-hours {
+    width: 80%;
+    height: auto;
+  }
+  
+  #phone-email h3, 
+  #location h3, 
+  #work-hours h3 {
+    font-size: 2.2vw;
+  }
+  
+  #phone-email p, 
+  #location p, 
+  #work-hours p {
+    margin: 0.5vw 0;
+    font-size: 2.1vw;
+  }
+  
+  .menus {
+    margin-top: 0;  
+    padding-top: 1vw;
+  }
+  
+  .menus .appetizers, 
+  .menus .mains, 
+  .menus .desserts {
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr;
+    margin-bottom: 8vw;
+  }
+  
+  .menus .mains img {
+    grid-row: 2/3;
+  }
+  
+  #mains-items {
+    grid-row: 1/2;
+  }
+  
+  .menus .appetizers img {
+    width: 70vw;
+    height: 90vw;
+    object-fit: cover;
+  }
+  
+  #appetizers-items h2, 
+  #mains-items h2, 
+  #desserts-items h2, 
+  .drinks h2 {
+    font-size: 4vw;
+  }
+  
+  #appetizers-dish p, 
+  #mains-dish p, 
+  #desserts-dish p, 
+  #white-wine p, 
+  #red-wine p, 
+  #rose-wine p, 
+  #sparkling-wine p, 
+  #champagne-wine p, 
+  #special p {
+    font-size: 3.2vw;
+  }
+  
+  #appetizers-dish p span, 
+  #mains-dish p span, 
+  #desserts-dish p span, 
+  #special p span {
+    font-size: 3vw;
+  }
+  
+  #price, .drinks #price {
+    font-size: 3vw !important;
+  }
+  
+  #restaurant-gallery, #food-drinks-gallery {
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: repeat(8, 1fr);
+    grid-gap: 2.3vw;
+  }
+  #restaurant-gallery-container, 
+  #food-drinks-gallery-container {
+    width: 80%;
+    margin-bottom: 8vw;
+  }
+  
+  #gallery-item {
+    height: 45vw;
+    width: 52vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3vw 0;
+  }
+  
+  #gallery-item img:hover {
+    transform: scale(1.2);
+  }
+  
+  .policy h4 {
+    font-size: 4.5vw;
+  }
+  
+  .policy p {
+    font-size: 3vw;
+  }
+  
+  .reservation h2 {
+    text-align: center;
+    margin: 2vw 0;
+    padding: 2vw 0;
+    font-size: 6vw;
+  }
+  
+  form h3 {
+    font-size: 4vw;
+    text-align: center;
+    padding: 2.2vw 0;
+    margin: 0 auto;
+    width: 80%;
+  }
+  
+  #reservation-details {
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: repeat(5, 1fr);
+    width: 80%;
+    padding: 0 0 3vw 0;
+  }
+  
+  #contact-info-add {
+    display: block;
+    width: 80%;
+    padding: 0 0 3vw 0;
+  }
+  
+  #form-comments,
+  #form-name,
+  #form-phone,
+  #form-email {
+    text-align: center;
+    padding: 0 0 3vw 0;
+  }
+  
+  label, 
+  #date, 
+  #time, 
+  #seating, 
+  #adults, 
+  #children, 
+  #name, 
+  #phone, 
+  #email, 
+  #comments {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 3.2vw;
+  }
+  
+  #form-date,
+  #form-time,
+  #form-adults,
+  #form-children,
+  #form-seating {
+    text-align: center;
+  }
+  
+  #date, 
+  #time, 
+  #seating, 
+  #adults, 
+  #children, 
+  #name, 
+  #phone, 
+  #email, 
+  #comments {
+    width: 35vw !important;
+    height: 4.5vw;
+  }
+
+  #submit-button {
+    text-align: center;
+    margin-bottom: 3vw;
+  }
+  
+  #submit {
+    font-size: 3.5vw;
+  }
+  
+  footer {
+    height: 5vw;
+    box-sizing: border-box;
+  }
+  
+  footer h5 {
+    font-size: 2.5vw;
+  }
+}

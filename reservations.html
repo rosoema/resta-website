@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <title>Reservations | Resta</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="Ema Roso">
+    <meta name="keywords" content="resta, restaurand, food, fine dining, drinks, menu">
+    <meta name="description" content="Resta is regarded as one of the best restaurants in the world, with its innovative cuisine and offers of high quality fine dining, wine, service and atmosphere.">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="icon" href="mediji/icon.ico">
+    <script src="myScript.js"></script>
+    <script type="text/javascript">
+
+    <!--
+      
+      // Kod za pop-up prozorčić kod formulara - kako se ne bi izgubiti podaci, baš je ovdje jer je ovo jedina stranica na kojoj želimo tu funkciju
+      
+      window.addEventListener("beforeunload", function (e) {
+      e.preventDefault();
+      e.returnValue = "";
+      });
+      
+      
+    //-->
+    </script>
+  </head>
+  
+  <body>
+    
+    <div class="invisible" id="overlay" onclick="backToNormal()"></div>
+    
+  <!--- Header section (logo and navigation bar) --->
+    
+    <header>
+      <a href="index.html"><img src="mediji/logo.png" alt="resta logo"></a>
+      <button class="gototop"></button>
+
+      <nav>
+        <ul>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="reservations.html">Reservations</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Menu</a>
+            <div class="dropdown-content">
+              <a href="food.html">Food</a>
+              <a href="drinks.html">Drinks</a>
+            </div>
+          </li>
+          <li><a href="index.html">Welcome</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <!--- Main content (reservation form and cancellation policy)--->
+    
+    <main>
+    
+      <div class="invisible" id="alert-box">
+        <h2>Thank You!</h2>
+        <p>Your reservation is confirmed. You should recieve your confirmation by e-mail provided shortly.</p>
+        <p id="confirmation"></p>
+        <a id="back-to-main-page" href="index.html">Back to main page</a>
+      </div>
+      
+      <div class="reservation">
+        
+        <h2>Book a table</h2>
+        <form method="post" target="_blank" action="mailto:reservations@resta.com" enctype="text/plain" onsubmit="thankYou()" name="reserve">
+          
+          <h3>Reservation details</h3>
+          <div id="reservation-details">
+            <div id="form-date">
+              <label for="date">Which day would you like? *</label>
+              <input type="date" id="date" name="date" required="required" min="2021-05-31" max="2021-12-31" onclick="todayDay()" onchange="DateTime()">
+            </div>
+            
+            <div id="form-time">
+              <label for="time">At what time? *</label>
+              <input type="time" id="time" name="time" required="required" onclick="prettyTime()" onchange="workingHours()">
+            </div>
+          
+            <div id="form-seating">
+              <label for="seating">Choose a table (additional cost)</label>
+              <input list="seats" name="seats" id="seating" placeholder="Choose a table (optional)" onclick="showEverything()" onkeypress="clearEverything()" onchange="tableCheck()">
+                <datalist id="seats">
+                  <option value="Window table">
+                  <option value="At the bar">
+                  <option value="Booth">
+                  <option value="Private room (up to 16 people)">
+                </datalist>
+            </div>
+            
+            <div id="form-adults">
+              <label for="adults">How many people? *</label>
+              <input type="number" name="adults" id="adults" required="required" min="0" max="6" placeholder="Adults *" oninput="numberCheck()">
+            </div>
+          
+            <div id="form-children">
+              <label for="children">Children? *</label>
+              <input type="number" name="children" id="children" required="required" min="0" max="6" placeholder="Children *" oninput="numberCheck()">
+            </div>
+          </div>
+          
+          <h3>Contact information & additional comments</h3>
+          <div id="contact-info-add">
+            <div id="form-name">
+              <label for="name">Please enter your name *</label>
+              <input type="text" name="name" id="name" required="required" placeholder="Name *" onchange="nameCheck()">
+            </div> 
+      
+            <div id="form-phone">
+              <label for="phone">Please enter your phone number *</label>
+              <input type="tel" name="phone" id="phone" required="required" placeholder="Phone number *" onchange="phoneCheck()">
+            </div>
+          
+            <div id="form-email">
+              <label for="email">Please enter your e-mail address *</label>
+              <input type="email" id="email" name="email" required="required" placeholder="E-mail address *" onchange="emailCheck()">
+            </div>
+          
+            <div id="form-comments">
+              <label for="comments">Any special requests?</label>
+              <textarea name="comments" id="comments" cols="50" rows="10" placeholder="Dietary requirements, allergies, intolerances, etc."></textarea>
+            </div>
+          </div>
+          
+          <div id="submit-button">
+            <button type="submit" id="submit">Submit</button>
+          </div>
+          
+        </form>
+      </div>
+      
+    </main>
+    
+    <!--- Additional information --->
+    
+    <section class="policy">
+      <h4>Special requirements</h4>
+      <p>Please advise us of any allergies and special requirements/occasion.</p>
+      <p>All of our menus are available on our website, but should you have any specific requirements related to an allergy or intolerance, please specify at the time of your booking and our team will assist you with the menu on the day.</p>
+      
+      <h4>Child policy</h4>
+      <p>We welcome children of all ages. However please do count them (including babies) into your final party size. If you would require a highchair or space for a pushchair, please do specify this at the time of booking.</p>
+      
+      <h4>Booking policy & additional costs</h4>
+      <p>Our reservations diary is open up to 12 months in advance. Reservations phone lines are open between 3pm-7pm, seven days a week.</p>
+      <p>Kitchen closes 1 hour before closing time. Therefore, last seating is also 1 hour before closing.</p>
+      <p>If choosing a table when making a reservation, additional €15 will be applied to the final bill.</p>
+      
+      <h4>Cancellation policy</h4>
+      <p>We are committed to providing superior quality services to our customers. We rely on reservations being honoured by our customers, or adequate notice given of any changes.</p>
+      <p>For tables of up to 6 guests, we require 24 hours notice for complete cancellation.</p>
+      <p>For tables of 7 guests or more, we require 48 hours notice for complete cancellation.</p> 
+      <p>For groups larger than 20 guests, we require 72 hours for complete cancellation.</p>
+      <p>72 hours notice is required for change of numbers of group event bookings, or on special event days.</p>
+      <p>In all cases, we require 24 hours notice to amend a reservation. If there are any cancellations or amendments outside of these timescales, full cancellation fee will be charged accordingly.</p>
+      <p>The cancellation fee will reflect any cost incurred in terms of staff, food or beverage booked or ordered specifically for your group or party, and any lost revenue as a result of turning other bookings away. We will notify you of any cancellation fee applied.</p>
+      <p>We reserve the right to blacklist anyone who does not honour their reservation, and future reservations with us may no longer be possible.</p>
+      
+    </section>
+      
+    <!--- Contact section --->
+      
+    <section id="contact">
+      <div id="contact-container">
+        <div id="phone-email">
+          <h3>Contact</h3>
+          <p><strong>phone:</strong> 636-203-3031</p>
+          <p><strong>e-mail:</strong> contact@resta.com</p>
+        </div>
+          
+        <div id="location">
+          <h3>Location</h3>
+          <p>835  Matthews Dr</p>
+          <p>Fenton</p>          
+          <p>MO 63026</p>
+          <p>Find us on <a target="_blank" href="https://goo.gl/maps/9FSRGt4BrASGCkS29">Google Maps</a>!</p>
+        </div>
+        
+        <div id="work-hours">
+          <h3>Working Hours</h3>
+          <p><strong>MON - FRI</strong> 18:00 - 23:00</p>
+          <p><strong>SAT</strong> 19:00 - 01:00</p>          
+          <p><strong>SUN</strong> closed</p>
+        </div>
+      </div>
+    </section> 
+  
+    
+    <!--- Footer --->
+        
+    <footer>
+      <h5>copyright © 2022 Roso Ema All rights reserved.</h5>
+    </footer>
+    
+  </body>
+
+</html>
