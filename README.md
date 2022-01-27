@@ -42,14 +42,6 @@ Photos of my work are below.
 
 ## Smaller Screens 
 
-
-![Untitled10](https://user-images.githubusercontent.com/98010825/151412133-cbcadb6c-7c90-4b46-94d3-6fb47dc726b8.png)
-
-
-![Untitled11](https://user-images.githubusercontent.com/98010825/151412149-f20f931c-8db4-4455-8afc-98184510d7f1.png)
+![Frame 1](https://user-images.githubusercontent.com/98010825/151412600-44ea984e-44a5-4f40-a38a-41d616587164.png)
 
 
-![Untitled12](https://user-images.githubusercontent.com/98010825/151412161-9614bea7-fd7d-4de9-8ce0-5b58a4338848.png)
-
-
-![Untitled13](https://user-images.githubusercontent.com/98010825/151412171-b7447dc6-afb7-4fd3-a7ab-f7175cf7eece.png)
