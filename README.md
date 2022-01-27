@@ -8,3 +8,48 @@ Page is responsive, interactive with the user and fully compatible with all scre
 
 
 Photos of my work are below. 
+
+# Desktop View
+
+
+![Untitled1](https://user-images.githubusercontent.com/98010825/151411756-ac90a68c-49a0-40bd-9c9b-0adcf2fe8d3b.png)
+
+
+![Untitled2](https://user-images.githubusercontent.com/98010825/151411768-cac9fdb2-ca61-4c4d-96de-62f0f77345e9.png)
+
+
+![Untitled3](https://user-images.githubusercontent.com/98010825/151411956-9309eeff-b8d3-416e-8690-458f0dbe9f4d.png)
+
+
+![Untitled4](https://user-images.githubusercontent.com/98010825/151411964-bad8daf2-1f99-4095-8420-3ab462b51a10.png)
+
+
+![Untitled5](https://user-images.githubusercontent.com/98010825/151411982-269e22f8-b0a5-4f15-b9b8-7434e42850a0.png)
+
+
+![Untitled6](https://user-images.githubusercontent.com/98010825/151411995-acfd4fb4-485b-4986-8be2-c37e1a0bf5d6.png)
+
+
+![Untitled7](https://user-images.githubusercontent.com/98010825/151412007-7dbeafeb-e74c-43fe-a36e-c0b616461a1a.png)
+
+
+![Untitled8](https://user-images.githubusercontent.com/98010825/151412011-4324ec7b-0bc3-4cbf-a3ab-d800592f1f04.png)
+
+
+![Untitled9](https://user-images.githubusercontent.com/98010825/151412021-61f2a85e-123f-4db4-a04a-01797c35c065.png)
+
+
+
+## Smaller Screens 
+
+
+![Untitled10](https://user-images.githubusercontent.com/98010825/151412133-cbcadb6c-7c90-4b46-94d3-6fb47dc726b8.png)
+
+
+![Untitled11](https://user-images.githubusercontent.com/98010825/151412149-f20f931c-8db4-4455-8afc-98184510d7f1.png)
+
+
+![Untitled12](https://user-images.githubusercontent.com/98010825/151412161-9614bea7-fd7d-4de9-8ce0-5b58a4338848.png)
+
+
+![Untitled13](https://user-images.githubusercontent.com/98010825/151412171-b7447dc6-afb7-4fd3-a7ab-f7175cf7eece.png)
